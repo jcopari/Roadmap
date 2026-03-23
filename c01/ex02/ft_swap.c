@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcopari- <jcopari-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 09:01:36 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/11/27 09:29:08 by jcopari-         ###   ########.fr       */
+/*   Created: 2026/01/25 08:35:23 by jcopari-          #+#    #+#             */
+/*   Updated: 2026/01/25 08:46:12 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void    ft_is_negative(int number)
+void    ft_swap(int *a, int *b)
 {
-    if (number < 0)
-        write (1, "N", 1);
-    else
-        write (1, "P", 1);
+    int     c; //Inteiro
+    
+    c = *a;  //Inteiro C recebe conteúdo de A;
+    *a = *b; //Conteúdo de A vira conteúdo de B;
+    *b = c;  //Conteúdo de B vira inteiro de C;
+}
+
+int main(void)
+{
+    int a = 1;
+    int b = 2;
+    
+    ft_swap(&a, &b);
+    printf("a:%d b:%d", a, b);
 }

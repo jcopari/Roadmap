@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   endianess.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcopari- <jcopari-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 09:01:36 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/11/27 09:29:08 by jcopari-         ###   ########.fr       */
+/*   Created: 2026/01/06 09:49:02 by jcopari-          #+#    #+#             */
+/*   Updated: 2026/01/06 09:57:31 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void    ft_is_negative(int number)
+int main(void)
 {
-    if (number < 0)
-        write (1, "N", 1);
-    else
-        write (1, "P", 1);
+    unsigned int inteiro = 0x11223344;
+    unsigned char *ptr = (unsigned char *)&inteiro; 
+    
+    printf("%x\n", inteiro);
+    for(int i = 0; i < 4; i++)
+    {
+        printf("%.2x", *ptr);
+        ptr++;
+    }
+    printf("\n");
+    return 0;
 }

@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcopari- <jcopari-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 09:01:36 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/11/27 09:29:08 by jcopari-         ###   ########.fr       */
+/*   Created: 2025/12/03 11:59:44 by jcopari-          #+#    #+#             */
+/*   Updated: 2025/12/03 13:16:55 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+// $>./a.out | cat -e
+// 01, 02, 03, ..., 09, 12, ..., 79, 89$>
 
-void    ft_is_negative(int number)
+void ft_print_combn(int n)
 {
-    if (number < 0)
-        write (1, "N", 1);
-    else
-        write (1, "P", 1);
+	if (n < 1 || n > 9)
+		return ;
+	int	comb[10];
+	
+	// if()
+
+	
+	
+	
+	
 }
